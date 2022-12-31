@@ -1,4 +1,3 @@
-
 package com.portfoliooab.OAB.Dto;
 
 import javax.validation.constraints.NotBlank;
