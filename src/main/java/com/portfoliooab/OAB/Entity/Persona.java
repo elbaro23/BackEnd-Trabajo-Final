@@ -6,46 +6,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import lombok.Getter; //en el capitulo 20 se borran
-import lombok.Setter; //en el capitulo 20 se borran
 
-@Getter @Setter
 @Entity
 public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    @NotNull
-    @Size(min = 1, max = 50,  message = "no cumple con la longitud")
-    private String nombre;
-    
-    @NotNull
-    @Size(min = 1, max = 50,  message = "no cumple con la longitud")
-    private String apellido;
-    
-    @NotNull
-    @Size(min = 1, max = 50,  message = "no cumple con la longitud")
-    private String img;
-}
-
-/* Modificaciones del capitulo 20 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+
     @NotNull
-    @Size(min = 1, max = 50,  message = "no cumple con la longitud")
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String nombre;
-    
+
     @NotNull
-    @Size(min = 1, max = 50,  message = "no cumple con la longitud")
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String apellido;
-    
+
     @NotNull
     private String descripcion;
-    
+
     private String img;
 
     public Persona() {
@@ -97,6 +76,5 @@ public class Persona {
     public void setImg(String img) {
         this.img = img;
     }
-         
-    
-}*/
+
+}
