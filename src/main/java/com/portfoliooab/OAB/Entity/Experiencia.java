@@ -1,4 +1,3 @@
-
 package com.portfoliooab.OAB.Entity;
 
 import javax.persistence.Entity;
@@ -8,14 +7,14 @@ import javax.persistence.Id;
 
 @Entity
 public class Experiencia {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreE;
     private String descripcionE;
-    
-    //Constructores
 
+    //Constructores
     public Experiencia() {
     }
 
@@ -23,9 +22,8 @@ public class Experiencia {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
-    
-    //Getters & Setters
 
+    //Getters & Setters
     public int getId() {
         return id;
     }
@@ -49,5 +47,5 @@ public class Experiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
+
 }

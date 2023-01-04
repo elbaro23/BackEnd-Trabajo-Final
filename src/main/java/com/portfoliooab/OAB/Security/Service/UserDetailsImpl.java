@@ -1,4 +1,3 @@
-
 package com.portfoliooab.OAB.Security.Service;
 
 import com.portfoliooab.OAB.Security.Entity.Usuario;
@@ -10,7 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserDetailsImpl implements UserDetailsService{
+public class UserDetailsImpl implements UserDetailsService {
+
     @Autowired
     UsuarioService usuarioService;
 

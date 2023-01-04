@@ -1,4 +1,3 @@
-
 package com.portfoliooab.OAB.Security.Entity;
 
 import com.portfoliooab.OAB.Security.Enums.RolNombre;
@@ -12,6 +11,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Rol {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -20,7 +20,6 @@ public class Rol {
     private RolNombre rolNombre;
 
     //Constructor
-
     public Rol() {
     }
 
@@ -44,5 +43,5 @@ public class Rol {
     public void setRolNombre(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
-    
+
 }

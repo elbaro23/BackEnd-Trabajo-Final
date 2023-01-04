@@ -1,4 +1,3 @@
-
 package com.portfoliooab.OAB.Security.Repository;
 
 import com.portfoliooab.OAB.Security.Entity.Rol;
@@ -9,5 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface iRolRepository extends JpaRepository<Rol, Integer> {
+
     Optional<Rol> findByRolNombre(RolNombre rolNombre);
 }

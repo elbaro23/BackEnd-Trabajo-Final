@@ -1,4 +1,3 @@
-
 package com.portfoliooab.OAB.Security;
 
 import com.portfoliooab.OAB.Security.Service.UserDetailsImpl;
@@ -21,20 +20,21 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class MainSecurity extends WebSecurityConfigurerAdapter{
+public class MainSecurity extends WebSecurityConfigurerAdapter {
+
     @Autowired
     UserDetailsImpl userDetailsServicesImpl;
-    
+
     @Autowired
     JwtEntryPoint jwtEntryPoint;
-    
+
     @Bean
     public JwtTokenFilter jwtTokenFilter() {
         return new JwtTokenFilter();
     }
-    
+
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -59,12 +59,12 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean(); 
+        return super.authenticationManagerBean();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsServicesImpl).passwordEncoder(passwordEncoder());
     }
-    
+
 }

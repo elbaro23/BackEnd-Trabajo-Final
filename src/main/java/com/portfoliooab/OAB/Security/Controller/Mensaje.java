@@ -1,12 +1,10 @@
-
 package com.portfoliooab.OAB.Security.Controller;
 
-
 public class Mensaje {
-    private String mensaje;
-    
-    //Constructor
 
+    private String mensaje;
+
+    //Constructor
     public Mensaje() {
     }
 
@@ -22,6 +20,5 @@ public class Mensaje {
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
     }
-    
-    
+
 }

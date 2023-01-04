@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = {"https://frontend-oab.web.app/","http://localhost:4200"})
+@CrossOrigin(origins = {"https://frontend-oab.web.app", "http://localhost:4200"})
 
 public class CEducacion {
 
@@ -85,14 +85,14 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         //El Nombre es obligatorio
-        if(StringUtils.isBlank(dtoeducacion.getNombreE())){
+        if (StringUtils.isBlank(dtoeducacion.getNombreE())) {
             return new ResponseEntity(new Mensaje("El campo no puede estar vacio"), HttpStatus.BAD_REQUEST);
         }
         //La Descripción es obligatorio
         if (StringUtils.isBlank(dtoeducacion.getDescripcionE())) {
             return new ResponseEntity(new Mensaje("La Descripción es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        
+
         Educacion educacion = sEducacion.getOne(id).get();
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
